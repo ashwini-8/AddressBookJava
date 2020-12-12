@@ -16,6 +16,7 @@ public class AddressBookMainClass {
 			System.out.println("1: For add new Address");
 			System.out.println("2: To Print all information");
 			System.out.println("3: To Update the existing information");
+			System.out.println("4: To Delete the contact");
 
 			int option = scan.nextInt();
 			switch (option) {
@@ -31,6 +32,11 @@ public class AddressBookMainClass {
 				long key = scan.nextLong();
 				contactPerson = addressBookOperation.newAddressBook();
 				addressBookOperation.updateValue(key, contactPerson);
+				break;
+			case 4:
+				System.out.println("Enter the Phone Number to delete address");
+				long phoneToDelete = scan.nextLong();
+				addressBookOperation.deleteAddress(phoneToDelete);
 				break;
 			default:
 				System.out.println("Please select valid option");

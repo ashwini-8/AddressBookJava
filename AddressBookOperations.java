@@ -60,11 +60,23 @@ public class AddressBookOperations implements AddressBookInterface {
 		if (addressBookContainer.containsKey(key) == false) {
 			System.out.println("Key Not Found");
 		} else if (addressBookContainer.containsKey(key) == true) {
-			System.out.println("key matched");
 			addressBookContainer.put(key, newaddressBook);
 			System.out.println("Values Updated");
 		}
 		return addressBookContainer;
+	}
+
+	@Override
+	public void deleteAddress(long key) {
+
+		if (addressBookContainer.containsKey(key) == false) {
+			System.out.println("Invalid Key !!!!!!!");
+		} else {
+			addressBookContainer.remove(key);
+			System.out.println(key + " Deleted Successfully");
+
+		}
+
 	}
 
 }
