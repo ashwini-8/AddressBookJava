@@ -14,12 +14,17 @@ public class AddressBookMainClass {
 		boolean terminate = false;
 		while (terminate != true) {
 			System.out.println("1: For add new Address");
+			System.out.println("2: To Print all information");
 
 			int option = scan.nextInt();
 			switch (option) {
 			case 1:
 				contactPerson = addressBookOperation.newAddressBook();
 				System.out.println(addressBookOperation.save(contactPerson.getPhone(), contactPerson));
+				break;
+
+			case 2:
+				addressBookOperation.printAllDetails();
 				break;
 
 			default:

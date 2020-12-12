@@ -1,7 +1,10 @@
 package com.Project.AddressBook;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Scanner;
+import java.util.Set;
 
 public class AddressBookOperations implements AddressBookInterface {
 
@@ -38,6 +41,17 @@ public class AddressBookOperations implements AddressBookInterface {
 		newAddressBook.setZip(zip);
 		newAddressBook.setPhone(phone);
 		return newAddressBook;
+	}
+
+	@Override
+	public void printAllDetails() {
+		Set keys = addressBookContainer.keySet();
+		Iterator iterate = keys.iterator();
+		Collection<AddressBookContactDetails> getValues = addressBookContainer.values();
+		iterate = getValues.iterator();
+		while (iterate.hasNext()) {
+			System.out.println("Details are : " + iterate.next());
+		}
 	}
 
 }
