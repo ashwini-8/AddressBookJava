@@ -12,4 +12,6 @@ public interface AddressBookInterface {
 
 	public void deleteAddress(long key);
 
+	public void sortByfirstName();
+
 }

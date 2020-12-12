@@ -17,6 +17,7 @@ public class AddressBookMainClass {
 			System.out.println("2: To Print all information");
 			System.out.println("3: To Update the existing information");
 			System.out.println("4: To Delete the contact");
+			System.out.println("5: To short the Address First Name");
 
 			int option = scan.nextInt();
 			switch (option) {
@@ -37,6 +38,9 @@ public class AddressBookMainClass {
 				System.out.println("Enter the Phone Number to delete address");
 				long phoneToDelete = scan.nextLong();
 				addressBookOperation.deleteAddress(phoneToDelete);
+				break;
+			case 5:
+				addressBookOperation.sortByfirstName();
 				break;
 			default:
 				System.out.println("Please select valid option");
