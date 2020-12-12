@@ -99,4 +99,22 @@ public class AddressBookOperations implements AddressBookInterface {
 		}
 	}
 
+	@Override
+	public void sortByZipCode() {
+
+		List<AddressBookContactDetails> value = new ArrayList<>();
+		if (addressBookContainer != null) {
+			value.addAll(addressBookContainer.values());
+
+			Collections.sort(value, new Comparator<AddressBookContactDetails>() {
+				public int compare(AddressBookContactDetails Person1, AddressBookContactDetails Person2) {
+					return Person1.getZip() - Person2.getZip();
+				}
+			});
+		}
+		for (AddressBookContactDetails sortedValue : value) {
+			System.out.println(sortedValue);
+		}
+	}
+
 }

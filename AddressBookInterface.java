@@ -14,4 +14,6 @@ public interface AddressBookInterface {
 
 	public void sortByfirstName();
 
+	public void sortByZipCode();
+
 }
