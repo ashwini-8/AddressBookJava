@@ -13,7 +13,7 @@ public class AddressBookMainClass {
 
 		boolean terminate = false;
 		while (terminate != true) {
-			System.out.println("1: For add new Address");
+			System.out.println("1: To add new Contact person");
 			System.out.println("2: To Print all information");
 			System.out.println("3: To Update the existing information");
 			System.out.println("4: To Delete the contact");
