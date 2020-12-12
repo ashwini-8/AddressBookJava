@@ -54,4 +54,17 @@ public class AddressBookOperations implements AddressBookInterface {
 		}
 	}
 
+	@Override
+	public HashMap updateValue(long key, AddressBookContactDetails newaddressBook) {
+
+		if (addressBookContainer.containsKey(key) == false) {
+			System.out.println("Key Not Found");
+		} else if (addressBookContainer.containsKey(key) == true) {
+			System.out.println("key matched");
+			addressBookContainer.put(key, newaddressBook);
+			System.out.println("Values Updated");
+		}
+		return addressBookContainer;
+	}
+
 }
