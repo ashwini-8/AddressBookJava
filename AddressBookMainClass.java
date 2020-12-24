@@ -19,7 +19,8 @@ public class AddressBookMainClass {
 			System.out.println("4: To Delete the contact");
 			System.out.println("5: To short the Address First Name");
 			System.out.println("6: To sort the Address by Zip Code");
-
+			System.out.println("7: Search by city");
+			
 			int option = scan.nextInt();
 			switch (option) {
 			case 1:
@@ -46,6 +47,12 @@ public class AddressBookMainClass {
 			case 6:
 				addressBookOperation.sortByZipCode();
 				break;
+			case 7:
+				System.out.println("enter the City to Search");
+				String inputcity = scan.next();
+                addressBookOperation.searchByCity(inputcity,contactPerson);
+				break;
+			
 			default:
 				System.out.println("Please select valid option");
 				break;

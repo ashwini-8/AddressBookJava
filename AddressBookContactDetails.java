@@ -34,7 +34,7 @@ public class AddressBookContactDetails {
 		Address = address;
 	}
 
-	public String getCity() {
+	public  String getCity() {
 		return city;
 	}
 

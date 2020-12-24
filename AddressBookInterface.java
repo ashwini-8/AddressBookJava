@@ -16,4 +16,7 @@ public interface AddressBookInterface {
 
 	public void sortByZipCode();
 
+	public void searchByCity(String city, AddressBookContactDetails addressBook);
+    
+    
 }
