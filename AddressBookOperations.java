@@ -119,6 +119,7 @@ public class AddressBookOperations implements AddressBookInterface {
 		}
 	}
 
+	
 	public void searchByCity(String icity, AddressBookContactDetails addressBook) {
 		
 		Set keys = addressBookContainer.keySet();
@@ -135,8 +136,24 @@ public class AddressBookOperations implements AddressBookInterface {
 			iterate.hasNext();
 			break;
 		}
-			
 	}
+	public void searchByState(String inputState, AddressBookContactDetails addressBook) {
 	
+	Set keys = addressBookContainer.keySet();
+	Iterator iterate = keys.iterator();
+	Collection<AddressBookContactDetails> getValues = addressBookContainer.values();
+	iterate = getValues.iterator();
+	while (iterate.hasNext()) 
+	{
+		System.out.println(addressBook.getState() +"  "+ inputState );
+		if (addressBook.getState().equals(inputState)) 
+		 { 
+		    System.out.println("Details are : "+ addressBook.getfirstName()+"  "+addressBook.getlastName()+"  "+addressBook.getPhone()+"  "+addressBook.getCity()+"  "+addressBook.getZip());
+				
+	     }
+		iterate.hasNext();
+		break;
+      }
+  }
 
 }

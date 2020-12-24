@@ -18,5 +18,7 @@ public interface AddressBookInterface {
 
 	public void searchByCity(String city, AddressBookContactDetails addressBook);
     
+    public void searchByState(String inputState, AddressBookContactDetails addressBook);
+    
     
 }
